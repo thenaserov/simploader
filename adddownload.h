@@ -9,14 +9,18 @@ class AddDownload;
 
 class AddDownload : public QWidget
 {
-    Q_OBJECT
+Q_OBJECT
 
 public:
-    explicit AddDownload(QWidget *parent = nullptr);
-    ~AddDownload();
+explicit AddDownload(QWidget *parent = nullptr);
+~AddDownload();
+QString link;
+
+private slots:
+void on_btnStartDownload_clicked();
 
 private:
-    Ui::AddDownload *ui;
+Ui::AddDownload *ui;
 };
 
 #endif // ADDDOWNLOAD_H

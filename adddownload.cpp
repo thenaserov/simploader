@@ -2,13 +2,19 @@
 #include "ui_adddownload.h"
 
 AddDownload::AddDownload(QWidget *parent)
-    : QWidget(parent)
-    , ui(new Ui::AddDownload)
+   : QWidget(parent)
+   , ui(new Ui::AddDownload)
 {
-    ui->setupUi(this);
+   ui->setupUi(this);
 }
 
 AddDownload::~AddDownload()
 {
-    delete ui;
+   delete ui;
+}
+
+
+void AddDownload::on_btnStartDownload_clicked()
+{
+   link = ui->leDownloadLink->text();
 }

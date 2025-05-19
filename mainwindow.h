@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "adddownload.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -11,22 +12,24 @@ QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
-    Q_OBJECT
+Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+MainWindow(QWidget *parent = nullptr);
+~MainWindow();
 
 private slots:
-    void on_pbDownloadList_clicked();
+void on_pbDownloadList_clicked();
 
-    void on_pbDownloadHistory_clicked();
+void on_pbDownloadHistory_clicked();
 
-    void on_pbSettings_clicked();
+void on_pbSettings_clicked();
 
-    void on_pbSaveSettings_clicked();
+void on_pbSaveSettings_clicked();
+
+void on_pbAddDownload_clicked();
 
 private:
-    Ui::MainWindow *ui;
+Ui::MainWindow *ui;
 };
 #endif // MAINWINDOW_H
