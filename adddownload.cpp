@@ -13,8 +13,8 @@ AddDownload::~AddDownload()
    delete ui;
 }
 
-
 void AddDownload::on_btnStartDownload_clicked()
 {
    link = ui->leDownloadLink->text();
+
 }
