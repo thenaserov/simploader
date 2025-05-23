@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QFile>
+#include "downloadhistoryentry.h"
 #include "adddownload.h"
 
 QT_BEGIN_NAMESPACE
@@ -31,5 +35,7 @@ void on_pbAddDownload_clicked();
 
 private:
 Ui::MainWindow *ui;
+    void saveDownloadHistory();
+void loadDownloadHistory();
 };
 #endif // MAINWINDOW_H

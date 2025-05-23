@@ -23,5 +23,4 @@ void AddDownload::on_btnStartDownload_clicked()
     url = ui->leDownloadLink->text();
     QString outputPath = "/Users/thenaserov/Downloads/" + url.fileName();
     Downloader *downloader = new Downloader(url, outputPath, m_prDownload, m_listWidget, this);
-    this->deleteLater();
 }
