@@ -22,7 +22,11 @@
     </widget>
    </item>
    <item row="0" column="1">
-    <widget class="QLineEdit" name="leDownloadLink"/>
+    <widget class="QLineEdit" name="leDownloadLink">
+     <property name="text">
+      <string>https://dl.musicdel.ir/Music/1402/07/dorcci_ros3_gold.mp3</string>
+     </property>
+    </widget>
    </item>
    <item row="1" column="0" colspan="2">
     <widget class="QPushButton" name="btnStartDownload">
