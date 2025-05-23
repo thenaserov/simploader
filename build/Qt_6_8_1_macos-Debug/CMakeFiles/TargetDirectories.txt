@@ -1,9 +1,0 @@
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/simploader.dir
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/edit_cache.dir
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/rebuild_cache.dir
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/list_install_components.dir
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/install.dir
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/install/local.dir
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/install/strip.dir
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/simploader_autogen_timestamp_deps.dir
-/Users/thenaserov/Documents/simploader/build/Qt_6_8_1_macos-Debug/CMakeFiles/simploader_autogen.dir
