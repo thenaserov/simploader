@@ -18,7 +18,7 @@
     <item row="1" column="0" colspan="3">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pDownloadHistory">
        <layout class="QGridLayout" name="gridLayout_3">
@@ -155,7 +155,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QListWidget" name="listWidget_2"/>
+            <widget class="QListWidget" name="lwInProgress"/>
            </item>
            <item>
             <widget class="QPushButton" name="pbAddDownload">

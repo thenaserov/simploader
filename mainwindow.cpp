@@ -42,7 +42,6 @@ void MainWindow::on_pbSaveSettings_clicked()
 
 void MainWindow::on_pbAddDownload_clicked()
 {
-   AddDownload *dl_pop_up = new AddDownload(nullptr, ui->lwHistory);
-
+   AddDownload *dl_pop_up = new AddDownload(nullptr,ui->lwInProgress, ui->lwHistory);
    dl_pop_up->show();
 }

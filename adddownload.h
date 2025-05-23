@@ -17,7 +17,7 @@ class AddDownload : public QWidget
 Q_OBJECT
 
 public:
-explicit AddDownload(QWidget *parent = nullptr, QListWidget* lw = nullptr);
+explicit AddDownload(QWidget *parent = nullptr, QListWidget *prWidget = nullptr, QListWidget* lw = nullptr);
 ~AddDownload();
 QUrl url;
 
@@ -26,7 +26,8 @@ void on_btnStartDownload_clicked();
 
 private:
 Ui::AddDownload *ui;
-    QListWidget *m_listWidget = nullptr;
+QListWidget *m_listWidget = nullptr;
+QListWidget * m_prDownload = nullptr;
 };
 
 #endif // ADDDOWNLOAD_H
