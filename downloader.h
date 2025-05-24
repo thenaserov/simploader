@@ -50,29 +50,7 @@ public:
     }
 
 private slots:
-    // void onFinished(QNetworkReply *reply) {
-    //     Q_UNUSED(reply);
-    //     m_outputFile.close();
-    //     m_reply->deleteLater();
-    //     m_progressWidget->downloadFinished();
 
-    //     // Remove item from in-progress list
-    //     for (int i = 0; i < m_inProgressList->count(); ++i) {
-    //         if (m_inProgressList->itemWidget(m_inProgressList->item(i)) == m_progressWidget) {
-    //             QListWidgetItem *item = m_inProgressList->takeItem(i);
-    //             delete item;
-    //             break;
-    //         }
-    //     }
-
-    //     // Add to history list
-    //     if (m_historyList) {
-    //         QString fileName = m_outputFile.fileName().section('/', -1);
-    //         m_historyList->insertItem(0, fileName);  // Insert at top
-    //     }
-
-    //     qDebug() << "Download finished.";
-    // }
     void onFinished(QNetworkReply *reply) {
         Q_UNUSED(reply);
         m_outputFile.close();
