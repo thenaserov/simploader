@@ -37,5 +37,6 @@ private:
 Ui::MainWindow *ui;
     void saveDownloadHistory();
 void loadDownloadHistory();
+    void initIcons();
 };
 #endif // MAINWINDOW_H

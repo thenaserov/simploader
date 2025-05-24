@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
    ui->setupUi(this);
    this->setWindowTitle("simploader");
    loadDownloadHistory();
+   initIcons();
 }
 
 MainWindow::~MainWindow()
@@ -86,4 +87,17 @@ void MainWindow::loadDownloadHistory()
         DownloadHistoryEntry entry = DownloadHistoryEntry::fromJson(val.toObject());
         ui->lwHistory->addItem(entry.toDisplayString());
     }
+}
+
+void MainWindow::initIcons()
+{
+    // Add Download btn
+    QPixmap pmAdd = QPixmap(":/resources/add.png");
+    ui->pbAddDownload->setIcon(pmAdd);
+    // Save Settings btn
+    QPixmap pmSave = QPixmap(":/resources/save.png");
+    ui->pbSaveSettings->setIcon(pmSave);
+    // Clear All Histiry btn
+    QPixmap pmClear = QPixmap(":/resources/clear.png");
+    ui->pbClearAllHistory->setIcon(pmClear);
 }

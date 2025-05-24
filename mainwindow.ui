@@ -18,7 +18,7 @@
     <item row="1" column="0" colspan="3">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pDownloadHistory">
        <layout class="QGridLayout" name="gridLayout_3">
@@ -52,7 +52,7 @@ color:grey;
 background-color:#ffccff;</string>
              </property>
              <property name="text">
-              <string>clear all -</string>
+              <string>clear all</string>
              </property>
             </widget>
            </item>
@@ -199,7 +199,7 @@ color:grey;
 background-color:#ccffff;</string>
              </property>
              <property name="text">
-              <string>Add +</string>
+              <string>Add</string>
              </property>
             </widget>
            </item>

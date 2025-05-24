@@ -6,7 +6,7 @@ AddDownload::AddDownload(QWidget *parent, QListWidget *prListWidget, QListWidget
    : QWidget(parent)
    , ui(new Ui::AddDownload)
    , m_listWidget(lw)
-    , m_prDownload(prListWidget)
+   , m_prDownload(prListWidget)
 {
    ui->setupUi(this);
    m_listWidget = lw;
