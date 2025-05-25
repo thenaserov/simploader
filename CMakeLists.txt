@@ -20,6 +20,16 @@ set(PROJECT_SOURCES
         adddownload.h
         adddownload.cpp
         adddownload.ui
+        downloader.h
+        downloader.cpp
+        downloadhistoryentry.h
+        downloadhistoryentry.h
+        downloadprogressdialog.cpp
+        downloadprogresswidget.h
+        downloadprogresswidget.cpp
+        downloadprogressdialog.h
+        downloadprogressdialog.cpp
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
