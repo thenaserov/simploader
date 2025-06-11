@@ -33,6 +33,8 @@ void on_pbSaveSettings_clicked();
 
 void on_pbAddDownload_clicked();
 
+void on_pbSaveTo_clicked();
+
 private:
 Ui::MainWindow *ui;
     void saveDownloadHistory();

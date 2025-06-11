@@ -101,3 +101,9 @@ void MainWindow::initIcons()
     QPixmap pmClear = QPixmap(":/resources/clear.png");
     ui->pbClearAllHistory->setIcon(pmClear);
 }
+
+void MainWindow::on_pbSaveTo_clicked()
+{
+
+}
+
