@@ -1,6 +1,5 @@
 #include "downloadprogresswidget.h"
 
-
 DownloadProgressWidget::DownloadProgressWidget(const QString &fileName, QWidget *parent)
     : QWidget(parent), progressBar(new QProgressBar), label(new QLabel) {
     QVBoxLayout *layout = new QVBoxLayout;
