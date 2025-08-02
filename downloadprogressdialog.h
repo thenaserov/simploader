@@ -14,7 +14,6 @@ public:
 
 public slots:
     void updateProgress(qint64 received, qint64 total);
-
     void downloadFinished();
 
 private:
