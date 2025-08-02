@@ -3,7 +3,7 @@
 DownloadProgressWidget::DownloadProgressWidget(const QString &fileName, QWidget *parent)
     : QWidget(parent), progressBar(new QProgressBar), label(new QLabel) {
     QVBoxLayout *layout = new QVBoxLayout;
-    layout->addWidget(new QLabel(fileName)); // File name label
+    layout->addWidget(new QLabel(fileName));
     layout->addWidget(progressBar);
     layout->addWidget(label);
     setLayout(layout);

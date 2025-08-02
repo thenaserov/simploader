@@ -5,11 +5,10 @@
 Downloader::Downloader(const QUrl &url, const QString &outputPath, QListWidget *inProgressList, QListWidget *historyList, QObject *parent)
     : QObject(parent), m_outputFile(outputPath), m_inProgressList(inProgressList), m_historyList(historyList) {
 
-    // Create the progress widget
-    QString fileName = outputPath.section('/', -1); // Extract filename
+    QString fileName = outputPath.section('/', -1);
     m_progressWidget = new DownloadProgressWidget(fileName);
 
-    // Insert at the top (index 0) instead of appending
+
     QListWidgetItem *item = new QListWidgetItem();
     item->setSizeHint(m_progressWidget->sizeHint());
     m_inProgressList->insertItem(0, item);
