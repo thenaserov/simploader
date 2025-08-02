@@ -14,20 +14,20 @@ class AddDownload;
 
 class AddDownload : public QWidget
 {
-Q_OBJECT
+    Q_OBJECT
 
 public:
-explicit AddDownload(QWidget *parent = nullptr, QListWidget *prWidget = nullptr, QListWidget* lw = nullptr);
-~AddDownload();
-QUrl url;
+    explicit AddDownload(QWidget *parent = nullptr, QListWidget *prWidget = nullptr, QListWidget* lw = nullptr);
+    ~AddDownload();
+    QUrl url;
 
 private slots:
-void on_btnStartDownload_clicked();
+    void on_btnStartDownload_clicked();
 
 private:
-Ui::AddDownload *ui;
-QListWidget *m_listWidget = nullptr;
-QListWidget * m_prDownload = nullptr;
+    Ui::AddDownload *ui;
+    QListWidget *m_listWidget = nullptr;
+    QListWidget * m_prDownload = nullptr;
 };
 
 #endif // ADDDOWNLOAD_H
