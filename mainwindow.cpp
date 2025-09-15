@@ -8,6 +8,7 @@ MainWindow::MainWindow(QWidget *parent)
    ui->setupUi(this);
    this->setWindowTitle("simploader");
    loadDownloadHistory();
+   ui->pbSettings->hide();
    initIcons();
 }
 

@@ -15,16 +15,64 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="0" colspan="3">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pbDownloadList">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 15px;
+color:grey;
+background-color:#ccccff;</string>
+      </property>
+      <property name="text">
+       <string>Download list</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QPushButton" name="pbDownloadHistory">
+      <property name="minimumSize">
+       <size>
+        <width>100</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 15px;
+color:grey;
+background-color:#ccccff;</string>
+      </property>
+      <property name="text">
+       <string>Download history</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="pDownloadHistory">
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">
          <widget class="QWidget" name="wDownloadHistory" native="true">
           <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="leftMargin">
+            <number>4</number>
+           </property>
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <property name="rightMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>4</number>
+           </property>
            <item>
             <widget class="QLabel" name="label_3">
              <property name="text">
@@ -186,6 +234,18 @@ background-color:#ccffff;</string>
         <item row="0" column="0">
          <widget class="QWidget" name="wDownloadList" native="true">
           <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="leftMargin">
+            <number>4</number>
+           </property>
+           <property name="topMargin">
+            <number>4</number>
+           </property>
+           <property name="rightMargin">
+            <number>4</number>
+           </property>
+           <property name="bottomMargin">
+            <number>4</number>
+           </property>
            <item>
             <widget class="QLabel" name="label_4">
              <property name="text">
@@ -224,43 +284,7 @@ background-color:#ccffff;</string>
       </widget>
      </widget>
     </item>
-    <item row="0" column="1">
-     <widget class="QPushButton" name="pbDownloadHistory">
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius: 15px;
-color:grey;
-background-color:#ccccff;</string>
-      </property>
-      <property name="text">
-       <string>Download history</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0">
-     <widget class="QPushButton" name="pbDownloadList">
-      <property name="minimumSize">
-       <size>
-        <width>100</width>
-        <height>30</height>
-       </size>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">border-radius: 15px;
-color:grey;
-background-color:#ccccff;</string>
-      </property>
-      <property name="text">
-       <string>Download list</string>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="2">
+    <item row="1" column="1">
      <widget class="QPushButton" name="pbSettings">
       <property name="minimumSize">
        <size>
