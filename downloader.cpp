@@ -2,7 +2,8 @@
 
 
 
-Downloader::Downloader(const QUrl &url, const QString &outputPath, QListWidget *inProgressList, QListWidget *historyList, QObject *parent)
+Downloader::Downloader(const QUrl &url, const QString &outputPath, QListWidget *inProgressList,
+                       QListWidget *historyList, QObject *parent)
     : QObject(parent), m_outputFile(outputPath), m_inProgressList(inProgressList), m_historyList(historyList) {
 
     QString fileName = outputPath.section('/', -1);
