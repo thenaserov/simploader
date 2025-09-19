@@ -24,11 +24,8 @@ set(PROJECT_SOURCES
         downloader.cpp
         downloadhistoryentry.h
         downloadhistoryentry.h
-        downloadprogressdialog.cpp
         downloadprogresswidget.h
         downloadprogresswidget.cpp
-        downloadprogressdialog.h
-        downloadprogressdialog.cpp
 
 )
 
@@ -37,7 +34,6 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         adddownload.h adddownload.cpp adddownload.ui
-        downloadprogressdialog.h downloadprogressdialog.cpp
         downloader.h downloader.cpp
         downloadprogresswidget.h downloadprogresswidget.cpp
         downloadhistoryentry.h
