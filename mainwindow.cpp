@@ -13,6 +13,7 @@ MainWindow::MainWindow(QWidget *parent)
    ui->label_2->hide();
    ui->spinBox->hide();
    ui->spinBox_2->hide();
+   loadSettings();
 }
 
 MainWindow::~MainWindow()
@@ -44,12 +45,24 @@ void MainWindow::on_pbSettings_clicked()
 
 void MainWindow::on_pbSaveSettings_clicked()
 {
+    QString dir = ui->lblDownloadDir->text();
+
+    QJsonObject obj;
+    obj["download_dir"] = dir;
+
+    QJsonDocument doc(obj);
+
+    QFile file("settings.json");
+    if (file.open(QIODevice::WriteOnly)) {
+        file.write(doc.toJson());
+        file.close();
+    }
 }
 
 
 void MainWindow::on_pbAddDownload_clicked()
 {
-   AddDownload *dl_pop_up = new AddDownload(nullptr,ui->lwInProgress, ui->lwHistory);
+   AddDownload *dl_pop_up = new AddDownload(nullptr,ui->lwInProgress, ui->lwHistory, downloadPath);
    dl_pop_up->show();
 }
 
@@ -106,8 +119,28 @@ void MainWindow::initIcons()
     ui->pbClearAllHistory->setIcon(pmClear);
 }
 
+void MainWindow::loadSettings()
+{
+    QFile file("settings.json");
+    if (file.open(QIODevice::ReadOnly)) {
+        QByteArray data = file.readAll();
+        file.close();
+
+        QJsonDocument doc = QJsonDocument::fromJson(data);
+        if (doc.isObject()) {
+            QJsonObject obj = doc.object();
+
+            if (obj.contains("download_dir")) {
+                QString dir = obj["download_dir"].toString();
+                ui->lblDownloadDir->setText(dir);
+            }
+        }
+    }
+}
+
 void MainWindow::on_pbSaveTo_clicked()
 {
-
+    downloadPath = QFileDialog::getExistingDirectory(this, "Select Download Folder");
+    ui->lblDownloadDir->setText(downloadPath);
 }
 

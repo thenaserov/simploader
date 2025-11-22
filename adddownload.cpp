@@ -2,11 +2,12 @@
 #include "ui_adddownload.h"
 
 
-AddDownload::AddDownload(QWidget *parent, QListWidget *prListWidget, QListWidget* lw)
+AddDownload::AddDownload(QWidget *parent, QListWidget *prListWidget, QListWidget* lw, QString downloadDir)
    : QWidget(parent)
    , ui(new Ui::AddDownload)
    , m_listWidget(lw)
    , m_prDownload(prListWidget)
+   , m_downloadDir(downloadDir)
 {
    ui->setupUi(this);
    m_listWidget = lw;
@@ -21,7 +22,7 @@ AddDownload::~AddDownload()
 void AddDownload::on_btnStartDownload_clicked()
 {
     url = ui->leDownloadLink->text();
-    QString outputPath = "/Users/thenaserov/Downloads/" + url.fileName();
+    QString outputPath = m_downloadDir + url.fileName();
     Downloader *downloader = new Downloader(url, outputPath, m_prDownload, m_listWidget, this);
     this->close();
 }

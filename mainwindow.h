@@ -5,6 +5,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QFile>
+#include <QFileDialog>
 #include "downloadhistoryentry.h"
 #include "adddownload.h"
 
@@ -35,5 +36,8 @@ private:
     void saveDownloadHistory();
     void loadDownloadHistory();
     void initIcons();
+    QString downloadPath;
+    void loadSettings();
+
 };
 #endif // MAINWINDOW_H
