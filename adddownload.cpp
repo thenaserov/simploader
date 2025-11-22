@@ -25,3 +25,9 @@ void AddDownload::on_btnStartDownload_clicked()
     Downloader *downloader = new Downloader(url, outputPath, m_prDownload, m_listWidget, this);
     this->close();
 }
+
+void AddDownload::on_btnCancel_clicked()
+{
+    this->close();
+}
+
