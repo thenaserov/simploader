@@ -29,6 +29,18 @@ set(PROJECT_SOURCES
 
 )
 
+set(ANDROID_EXTRA_LIBS
+    ${CMAKE_CURRENT_SOURCE_DIR}/android/libs/arm64-v8a/libcrypto.so
+    ${CMAKE_CURRENT_SOURCE_DIR}/android/libs/arm64-v8a/libssl.so
+
+    ${CMAKE_CURRENT_SOURCE_DIR}/android/libs/armeabi-v7a/libcrypto.so
+    ${CMAKE_CURRENT_SOURCE_DIR}/android/libs/armeabi-v7a/libssl.so
+
+    ${CMAKE_CURRENT_SOURCE_DIR}/android/libs/x86_64/libcrypto.so
+    ${CMAKE_CURRENT_SOURCE_DIR}/android/libs/x86_64/libssl.so
+)
+
+
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(simploader
         MANUAL_FINALIZATION
