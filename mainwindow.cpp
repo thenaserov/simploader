@@ -144,3 +144,15 @@ void MainWindow::on_pbSaveTo_clicked()
     ui->lblDownloadDir->setText(downloadPath);
 }
 
+
+void MainWindow::on_pbClearAllHistory_clicked()
+{
+    ui->lwHistory->clear();
+    QFile file("download_history.json");
+    if (file.open(QIODevice::WriteOnly)) {
+        file.resize(0);
+        file.close();
+    }
+
+}
+

@@ -31,6 +31,8 @@ private slots:
     void on_pbAddDownload_clicked();
     void on_pbSaveTo_clicked();
 
+    void on_pbClearAllHistory_clicked();
+
 private:
     Ui::MainWindow *ui;
     void saveDownloadHistory();
