@@ -20,7 +20,7 @@
       <property name="minimumSize">
        <size>
         <width>100</width>
-        <height>30</height>
+        <height>50</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -38,7 +38,7 @@ background-color:#ccccff;</string>
       <property name="minimumSize">
        <size>
         <width>100</width>
-        <height>30</height>
+        <height>50</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -56,7 +56,7 @@ background-color:#ccccff;</string>
       <property name="minimumSize">
        <size>
         <width>100</width>
-        <height>30</height>
+        <height>50</height>
        </size>
       </property>
       <property name="styleSheet">
@@ -72,7 +72,7 @@ background-color:#ccccff;</string>
     <item row="2" column="0" colspan="3">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="pDownloadHistory">
        <layout class="QGridLayout" name="gridLayout_3">
@@ -109,7 +109,7 @@ background-color:#ccccff;</string>
              <property name="minimumSize">
               <size>
                <width>100</width>
-               <height>30</height>
+               <height>50</height>
               </size>
              </property>
              <property name="styleSheet">
@@ -198,7 +198,7 @@ background-color:#ffccff;</string>
                 <property name="minimumSize">
                  <size>
                   <width>100</width>
-                  <height>30</height>
+                  <height>50</height>
                  </size>
                 </property>
                 <property name="styleSheet">
@@ -207,7 +207,7 @@ color:grey;
 background-color:#ccffff;</string>
                 </property>
                 <property name="text">
-                 <string>Save</string>
+                 <string>Save Settings</string>
                 </property>
                </widget>
               </item>
@@ -227,8 +227,19 @@ background-color:#ccffff;</string>
               </item>
               <item row="3" column="0" colspan="3">
                <widget class="QPushButton" name="pbSaveTo">
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">border-radius: 15px;
+color:grey;
+background-color:#ccffff;</string>
+                </property>
                 <property name="text">
-                 <string>Save to</string>
+                 <string>Save Directory</string>
                 </property>
                </widget>
               </item>
@@ -288,7 +299,7 @@ background-color:#ccffff;</string>
              <property name="minimumSize">
               <size>
                <width>100</width>
-               <height>30</height>
+               <height>50</height>
               </size>
              </property>
              <property name="styleSheet">
