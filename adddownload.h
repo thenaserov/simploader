@@ -6,6 +6,8 @@
 #include <QFile>
 #include <QUrl>
 #include <QDebug>
+#include <QDir>
+#include <QMessageBox>
 #include "downloader.h"
 
 namespace Ui {

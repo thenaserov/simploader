@@ -6,6 +6,7 @@
 #include <QJsonDocument>
 #include <QFile>
 #include <QFileDialog>
+#include <QStandardPaths>
 #include "downloadhistoryentry.h"
 #include "adddownload.h"
 
@@ -30,6 +31,7 @@ private slots:
     void on_pbSaveSettings_clicked();
     void on_pbAddDownload_clicked();
     void on_pbSaveTo_clicked();
+    void onDirectorySelected(const QString &path); // Custom slot for the signal
 
     void on_pbClearAllHistory_clicked();
 
@@ -40,6 +42,7 @@ private:
     void initIcons();
     QString downloadPath;
     void loadSettings();
+    QFileDialog *m_fileDialog = nullptr;
 
 };
 #endif // MAINWINDOW_H
