@@ -144,7 +144,6 @@ void MainWindow::on_pbSaveTo_clicked()
     ui->lblDownloadDir->setText(downloadPath);
 }
 
-
 void MainWindow::on_pbClearAllHistory_clicked()
 {
     ui->lwHistory->clear();
@@ -153,6 +152,4 @@ void MainWindow::on_pbClearAllHistory_clicked()
         file.resize(0);
         file.close();
     }
-
 }
-
