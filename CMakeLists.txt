@@ -48,26 +48,28 @@ target_link_libraries(simploader PRIVATE
 )
 
 # ----------------------------------------------------------------------
-# Android OpenSSL 3 support (Qt-provided prebuilt)
+# Android OpenSSL 3 support (Recommended Method)
 # ----------------------------------------------------------------------
 if(ANDROID)
-    message(STATUS "Attaching OpenSSL 3 libraries for Android")
+    message(STATUS "Downloading and attaching OpenSSL 3 libraries for Android")
 
-    set(QT_ANDROID_OPENSSL "/Users/thenaserov/Library/Android/sdk/android_openssl/ssl_3")
-    set(ANDROID_ABIS arm64-v8a armeabi-v7a x86 x86_64)
+    # Use FetchContent to download the KDAB repository with prebuilt OpenSSL libs
+    include(FetchContent)
+    FetchContent_Declare(
+        android_openssl
+        DOWNLOAD_EXTRACT_TIMESTAMP true
+        # This URL points to the repository containing the prebuilt libs and helper CMake script
+        URL https://github.com/KDAB/android_openssl/archive/refs/heads/master.zip
+    )
+    FetchContent_MakeAvailable(android_openssl)
 
-    set(ANDROID_OPENSSL_LIBS "")
-    foreach(ABI ${ANDROID_ABIS})
-        if(EXISTS "${QT_ANDROID_OPENSSL}/${ABI}/libcrypto_3.so" AND EXISTS "${QT_ANDROID_OPENSSL}/${ABI}/libssl_3.so")
-            list(APPEND ANDROID_OPENSSL_LIBS
-                "${QT_ANDROID_OPENSSL}/${ABI}/libcrypto_3.so"
-                "${QT_ANDROID_OPENSSL}/${ABI}/libssl_3.so"
-            )
-        endif()
-    endforeach()
+    # Include the helper script provided by the repository
+    include(${android_openssl_SOURCE_DIR}/android_openssl.cmake)
 
-    # Attach OpenSSL libraries to the APK
-    set_property(TARGET simploader PROPERTY ANDROID_EXTRA_LIBS "${ANDROID_OPENSSL_LIBS}")
+    # Use the helper function to link the libraries to your target
+    # This function handles the multi-ABI linking and setting of the ANDROID_EXTRA_LIBS property
+    add_android_openssl_libraries(simploader)
+
 endif()
 
 # ----------------------------------------------------------------------
